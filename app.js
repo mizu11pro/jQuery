@@ -34,23 +34,75 @@
 // });
 
 // 上から下へスライド後,色、大きさ変更後、下から上へスライド
+// $(function () {
+//   $('.box1').slideDown(function () {
+//     $('.box1').css({
+//       'background-color': '#0000ff',
+//       'width': '200px',
+//       'height': '100px'
+//     }).slideUp();
+//   });
+// });
+
+// ↓マウスオーバー(アウト)
+// $(function () {
+//   $('.box1').mouseover(function () {
+//     $('.box1').css({ 'background-color': '#0000ff' });
+//   });
+//   $('.box1').mouseout(function () {
+//     $('.box1').css({ 'background-color': '#ff0000' });
+//   });
+// });
+
+// クラス追加/解除
+// .addClass() 対象のHTML要素にclass属性を追加
+// .removeClass() 要素に設定されているclass属性が解除
+// $(function () {
+//   $('.box1').mouseover(function () {
+//     $('.box1').addClass('box1-ext');
+//   });
+//   $('.box1').mouseout(function () {
+//     $('.box1').removeClass('box1-ext');
+//   });
+// });
+
+// マウスクリックイベント
+// 72行目  .click()の場合クリックされた時点でイベントが終わってしまうが、.onだとクリック後に複数のイベントが行える
+// $(function () {
+//   $('.box1').on('click', function () {
+//     $('.box1').addClass('box1-ext');
+//   });
+//   $('.box1').mouseout(function () {
+//     $('.box1').removeClass('box1-ext');
+//   });
+// });
+
+// $(function () {
+//   $('.bg1').on('click', function () {
+//     $('.bg1').slideUp();
+//   });
+//   $('.bg2').on('click', function () {
+//     $('.bg2').slideUp();
+//   });
+//   $('.bg3').on('click', function () {
+//     $('.bg3').slideUp();
+//   });
+//   $('.bg4').on('click', function () {
+//     $('.bg4').slideUp();
+//   });
+// });
+// thisを使用
+// 「box1classの正方形がクリックされたとき、this(クリックされた要素)のみslideUpさせる」
+// $(function () {
+//   $('.box1').on('click', function () {
+//     $(this).slideUp();
+//   });
+// });
+
+// childrenを使用
+// ボタンをクリックしたときに「ul要素のchildren(子要素)(li)」の色を変更
 $(function () {
-  $('.box1').slideDown(function () {
-    $('.box1').css({
-      'background-color': '#0000ff',
-      'width': '200px',
-      'height': '100px'
-    }).slideUp();
+  $('button').on('click', function () {
+    $('ul').children().css('color', 'red');
   });
 });
-
-// 一つのcss時の書き方
-// $('セレクタ').css('background-color','#0000ff');
-// 複数時の書き方
-// $('セレクタ').css({
-//   'プロパティ1': '値1',
-//   'プロパティ2': '値2',
-//   :
-
-//   'プロパティn': '値n'
-// });

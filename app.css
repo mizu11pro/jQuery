@@ -1,6 +1,24 @@
-.box1{
+  /* .box1{
   display: none;
-  background-color:#ff0000;
+  background-color:#fff;
   height:200px;
   width:200px;
+  float:left;
+} */
+/* ↓mouseoverすると追加され、mouseoutすると外れるclass */
+ /* .box1-ext{
+  border: 10px solid black;
+} */
+
+/*.bg1{
+  background-color:#ffaaaa;
 }
+.bg2{
+  background-color:#ffbbbb;
+}
+.bg3{
+  background-color:#ffcccc;
+}
+.bg4{
+  background-color:#ffdddd;
+} */
